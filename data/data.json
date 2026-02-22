@@ -1,0 +1,35 @@
+{
+  "links": [
+    {
+      "itemId": "1",
+      "item": "Chun Plum under oatmeal",
+      "description": "A beautiful combination of Chun Plum glaze over an oatmeal base.",
+      "temperature": "Cone 6",
+      "glaze": [
+        "Chun Plum",
+        "Oatmeal"
+      ]
+    },
+    {
+      "itemId": "2",
+      "item": "Vase 1",
+      "description": "Honey Flux x3 under bands of Smokey Merlot and Blue Rutile",
+      "temperature": "",
+      "glaze": [
+        "Honey Flux",
+        "Blue Rutile",
+        "Smokey Merlot"
+      ]
+    },
+    {
+      "itemId": "3",
+      "item": "Vase 2",
+      "description": "Chun Plum x2, Sangria x2... Sangria is a special order glaze",
+      "temperature": "",
+      "glaze": [
+        "Chun Plum",
+        "Sangria"
+      ]
+    }
+  ]
+}

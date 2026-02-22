@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  app:
+    # Build from Dockerfile
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    
+    # Container configuration
+    container_name: glaze-graph
+    restart: unless-stopped
+    
+    # Port mapping: host:container
+    ports:
+      - "80:80"
+    
+    # Volume mounts: host:container:mode
+    # :ro = read-only (safer, prevents accidental writes)
+    volumes:
+      - ./data:/app/data:ro
+      - ./frontend/dist:/app/www:ro
+    
+    # Environment variables
+    environment:
+      - LOG_LEVEL=debug
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

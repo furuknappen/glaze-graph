@@ -1,0 +1,17 @@
+:80 {
+    # Serve Vite React build (static files)
+    root /app/www
+    file_server
+    
+    # Serve mounted data folder (data.json, images)
+    handle /data/* {
+        root /app/data
+        file_server
+    }
+    
+    # SPA fallback: rewrite 404s to index.html for client-side routing
+    handle_errors {
+        rewrite 404.html
+        file_server
+    }
+}
